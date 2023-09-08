@@ -1,6 +1,6 @@
 # Changelog
 
-## v0.0.2
+## v0.0.3
 
 - Removed example boilerplate
 
@@ -8,10 +8,10 @@
 
 ### v0.1.0
 
-- [ ] Project setup
+- [x] Project setup
   - [x] Add Fresh
   - [x] Remove example boilerplate
-  - [ ] Install lunchbox
+  - [x] Install lunchbox
 - [ ] Components
   - [ ] Color input
     - Input type text for hex string color
