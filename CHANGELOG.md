@@ -1,8 +1,8 @@
 # Changelog
 
-## v0.0.1
+## v0.0.2
 
-- Added the Fresh framework
+- Removed example boilerplate
 
 ## Roadmap
 
@@ -10,7 +10,7 @@
 
 - [ ] Project setup
   - [x] Add Fresh
-  - [ ] Remove example boilerplate
+  - [x] Remove example boilerplate
   - [ ] Install lunchbox
 - [ ] Components
   - [ ] Color input
