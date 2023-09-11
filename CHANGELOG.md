@@ -1,11 +1,8 @@
 # Changelog
 
-## v0.0.5
+## v0.0.6
 
-- Added `utils/const.ts` and `utils/types.ts`.
-- Added `islands/PaleteSelector` for selecting from the Lunchbox palette.
-- Added `components/ColorBlock.tsx`.
-- Updated `lunchbox-css`.
+- Added `islands/PaletteGeneratorForm` for better state manegement.
 
 ## Roadmap
 

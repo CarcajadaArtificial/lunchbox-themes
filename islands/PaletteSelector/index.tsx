@@ -22,8 +22,9 @@ export default function PaletteSelector(props: iPaletteSelector) {
           oninput={(ev) => setOrdered((ev.target as HTMLInputElement).checked)}
           type="checkbox"
           label="order"
+          tabIndex={-1}
         />
-        <div class="grid grid-cols-10 mt-3">
+        <div class="grid grid-cols-10 gap-1 mt-3">
           {palette.flat().map((color) => (
             <ColorBlock
               color={color}
