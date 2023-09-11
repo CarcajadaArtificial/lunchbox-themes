@@ -9,19 +9,12 @@
   },
   "lint": {
     "rules": {
-      "tags": [
-        "fresh",
-        "recommended"
-      ]
+      "tags": ["fresh", "recommended"]
     },
-    "exclude": [
-      "_fresh"
-    ]
+    "exclude": ["_fresh"]
   },
   "fmt": {
-    "exclude": [
-      "_fresh"
-    ]
+    "exclude": ["_fresh"]
   },
   "imports": {
     "$fresh/": "https://deno.land/x/fresh@1.4.3/",
@@ -33,9 +26,12 @@
     "twind": "https://esm.sh/twind@0.16.19",
     "twind/": "https://esm.sh/twind@0.16.19/",
     "$std/": "https://deno.land/std@0.193.0/",
+    "icons/": "https://deno.land/x/tabler_icons_tsx@0.0.4/tsx/",
+    "color": "https://deno.land/x/color@v0.3.0/mod.ts",
     "lunchbox": "https://deno.land/x/lunchbox@v0.2.6/mod.ts",
     "islands/": "./islands/",
-    "components/": "./components/"
+    "components/": "./components/",
+    "utils/": "./utils/"
   },
   "compilerOptions": {
     "jsx": "react-jsx",

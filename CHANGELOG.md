@@ -1,8 +1,12 @@
 # Changelog
 
-## v0.0.3
+## v0.0.4
 
-- Removed example boilerplate
+- Added `utils/color.ts` for general color utilities.
+- Added `islands/ColorInput` for an input with extended functionalities.
+- Updated `lunchbox-css`.
+- Updated `.vscode/settings.json`.
+
 
 ## Roadmap
 
@@ -14,9 +18,9 @@
   - [x] Install lunchbox
 - [ ] Components
   - [ ] Color input
-    - Input type text for hex string color
-    - Palette selector.
-    - Select "text and bg" or "detail"
+    - [x] Input type text for hex string color
+    - [x] HTML5 input type color synched with the selected color.
+    - [ ] Palette selector.
   - [ ] Palette Selector
     - Button that opens the palette dialog.
     - On clicking in a color inside the palette, that hex is added.
