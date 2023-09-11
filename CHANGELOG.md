@@ -1,12 +1,11 @@
 # Changelog
 
-## v0.0.4
+## v0.0.5
 
-- Added `utils/color.ts` for general color utilities.
-- Added `islands/ColorInput` for an input with extended functionalities.
+- Added `utils/const.ts` and `utils/types.ts`.
+- Added `islands/PaleteSelector` for selecting from the Lunchbox palette.
+- Added `components/ColorBlock.tsx`.
 - Updated `lunchbox-css`.
-- Updated `.vscode/settings.json`.
-
 
 ## Roadmap
 

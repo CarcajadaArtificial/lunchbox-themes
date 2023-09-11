@@ -6,6 +6,7 @@ import * as $0 from "./routes/_404.tsx";
 import * as $1 from "./routes/_app.tsx";
 import * as $2 from "./routes/index.tsx";
 import * as $$0 from "./islands/ColorInput/index.tsx";
+import * as $$1 from "./islands/PaletteSelector/index.tsx";
 
 const manifest = {
   routes: {
@@ -15,6 +16,7 @@ const manifest = {
   },
   islands: {
     "./islands/ColorInput/index.tsx": $$0,
+    "./islands/PaletteSelector/index.tsx": $$1,
   },
   baseUrl: import.meta.url,
 };

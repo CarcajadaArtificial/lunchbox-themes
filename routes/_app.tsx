@@ -9,7 +9,11 @@ export default function App({ Component }: AppProps) {
         <title>🍱 Lunchbox Themes</title>
         <link
           rel="stylesheet"
-          href="https://cdn.jsdelivr.net/gh/CarcajadaArtificial/lunchbox-css@v0.0.25/dist/presets/standard/style.css"
+          href="https://cdn.jsdelivr.net/gh/CarcajadaArtificial/lunchbox-css@v0.0.26/dist/presets/standard/style.css"
+        />
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/CarcajadaArtificial/lunchbox-css@v0.0.26/dist/modules/palette/style.css"
         />
       </head>
       <body>
