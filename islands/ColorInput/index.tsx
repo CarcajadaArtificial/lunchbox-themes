@@ -1,12 +1,20 @@
-import { useState } from "preact/hooks";
-import { stringIsValidHex, stringToHex } from "utils/color.ts";
+import { useEffect, useState } from "preact/hooks";
 import { Input, Layout, Text } from "lunchbox";
+import { stringIsValidHex, stringToHex } from "utils/color.ts";
 
-// interface iColorInput {}
+interface iColorInput {
+  selectedColor: string;
+  onSelectColor: (hex: string) => void;
+}
 
-export default function ColorInput(/* props: iColorInput */) {
-  const [colorHex, setColorHex] = useState<string>("");
+export default function ColorInput(props: iColorInput) {
+  const { selectedColor, onSelectColor } = props;
+  const [colorHex, setColorHex] = useState<string>(selectedColor);
   const [colorHexError, setColorHexError] = useState("");
+
+  useEffect(() => {
+    setColorHex(selectedColor);
+  }, [selectedColor]);
 
   return (
     <div class="flex gap-3">
@@ -23,6 +31,7 @@ export default function ColorInput(/* props: iColorInput */) {
             (inputValue.length === 4 || inputValue.length === 7)
           ) {
             if (stringIsValidHex(inputValue)) {
+              onSelectColor(inputValue);
               setColorHexError("");
             } else {
               setColorHexError(`The color ${inputValue} is invalid.`);
@@ -40,6 +49,7 @@ export default function ColorInput(/* props: iColorInput */) {
         oninput={(ev) => {
           const inputValue = (ev.target as HTMLInputElement).value;
           setColorHex(inputValue);
+          onSelectColor(inputValue);
         }}
         value={stringToHex(colorHex)}
       />

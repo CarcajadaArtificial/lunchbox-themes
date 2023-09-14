@@ -52,24 +52,24 @@ export const palette: Palette = {
 
 // deno-fmt-ignore
 export const hueLightnessPalette: (Colors | null)[][] = [
-  [ null,     'vino',     null,      null,      null,         null,  'jade',    'marino',  null,     'obsidiana' ],
-  ['pulpo',   'arandano', null,      null,      null,         null,   null,      null,    'lapis',   'chapopote' ],
-  ['pitahaya','manzana', 'ladrillo','cajeta',   null,        'cedro','turquesa','cobalto','uva',     'grafito'   ],
-  ['borrador','fresa',    null,      null,      null,        'limon', null,     'azulejo','lavanda', 'hierro'    ],
-  [ null,     'chicle',  'ambar',    null,      null,        'mota', 'menta',    null,    'magia',   'acero'     ],
-  ['ajolote', 'bombon',  'flan',    'tortilla', null,        'musgo','hielo',   'cielo',  'princesa','plata'     ],
-  [ null,     'pastel',   null,     'arena',   'mantequilla','alien', null,     'vinca',  'nube',    'papel'     ],
-  [ null,      null,      null,      null,      null,         null,   null,      null,     null,     'blanco'    ],
+  [ null,     'vino',     null,      null,         null,  'jade',    'marino',  null,     'obsidiana' ],
+  ['pulpo',   'arandano', null,      null,         null,   null,      null,    'lapis',   'chapopote' ],
+  ['pitahaya','manzana', 'ladrillo','cajeta',     'cedro','turquesa','cobalto','uva',     'grafito'   ],
+  ['borrador','fresa',    null,      null,        'limon', null,     'azulejo','lavanda', 'hierro'    ],
+  [ null,     'chicle',  'ambar',    null,        'mota', 'menta',    null,    'magia',   'acero'     ],
+  ['ajolote', 'bombon',  'flan',    'tortilla',   'musgo','hielo',   'cielo',  'princesa','plata'     ],
+  [ null,     'pastel',  'arena',   'mantequilla','alien', null,     'vinca',  'nube',    'papel'     ],
+  [ null,      null,      null,      null,         null,   null,      null,     null,     'blanco'    ],
 ];
 
 // deno-fmt-ignore
 export const connectionPalette: (Colors | null)[][] = [
-  ['cielo',  'vinca','nube',    'ajolote','pastel',     'borrador','pitahaya',null,'obsidiana', null ],
-  ['azulejo', null,  'princesa', null,    'bombon',      null,     'pulpo',   null,'chapopote', null ],
-  ['cobalto', null,  'magia',    null,    'chicle',      null,     'vino',    null,'grafito',   null ],
-  ['lapis',  'uva',  'lavanda',  null,    'fresa',      'manzana', 'arandano',null,'hierro',    null ],
-  ['marino',  null,   null,      null,     null,         null,     'ladrillo',null,'acero',     null ],
-  ['jade',   'cedro','limon',   'mota',    null,        'cajeta',  'ambar',   null,'plata',     null ],
-  ['turquesa',null,   null,     'musgo',   null,         null,     'flan',    null,'papel',     null ],
-  ['menta',  'hielo', null,     'alien',  'mantequilla','arena',   'tortilla',null,'blanco',    null ],
+  ['cielo',  'vinca','nube',    'ajolote','pastel',     'borrador','pitahaya',null,'obsidiana' ],
+  ['azulejo', null,  'princesa', null,    'bombon',      null,     'pulpo',   null,'chapopote' ],
+  ['cobalto', null,  'magia',    null,    'chicle',      null,     'vino',    null,'grafito'   ],
+  ['lapis',  'uva',  'lavanda',  null,    'fresa',      'manzana', 'arandano',null,'hierro'    ],
+  ['marino',  null,   null,      null,     null,         null,     'ladrillo',null,'acero'     ],
+  ['jade',   'cedro','limon',   'mota',    null,        'cajeta',  'ambar',   null,'plata'     ],
+  ['turquesa',null,   null,     'musgo',   null,         null,     'flan',    null,'papel'     ],
+  ['menta',  'hielo', null,     'alien',  'mantequilla','arena',   'tortilla',null,'blanco'    ],
 ];

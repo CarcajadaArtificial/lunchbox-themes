@@ -1,8 +1,8 @@
 # Changelog
 
-## v0.0.6
+## v0.0.7
 
-- Added `islands/PaletteGeneratorForm` for better state manegement.
+- Added palette selection feature.
 
 ## Roadmap
 

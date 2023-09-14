@@ -1,8 +1,14 @@
 import { Button, Layout, Text } from "lunchbox";
 import ColorInput from "islands/ColorInput/index.tsx";
 import PaletteSelector from "islands/PaletteSelector/index.tsx";
+import { palette } from "utils/const.ts";
+import { useEffect, useState } from "preact/hooks";
 
 export default function PaletteGeneratorForm() {
+  const [darkbg, setDarkbg] = useState("");
+  const [lightbg, setLightbg] = useState("");
+  const [personality, setPersonality] = useState("");
+
   return (
     <>
       <Layout type="full">
@@ -16,8 +22,14 @@ export default function PaletteGeneratorForm() {
           reprehenderit!
         </Text>
         <div>
-          <ColorInput />
-          <PaletteSelector />
+          <ColorInput
+            selectedColor={darkbg}
+            onSelectColor={(hex) => setDarkbg(hex)}
+          />
+          <PaletteSelector
+            selectedColor={darkbg}
+            onSelectColor={(color) => setDarkbg(palette[color].hex)}
+          />
         </div>
       </Layout>
       <Layout type="full">
@@ -31,8 +43,14 @@ export default function PaletteGeneratorForm() {
           reprehenderit!
         </Text>
         <div>
-          <ColorInput />
-          <PaletteSelector />
+          <ColorInput
+            selectedColor={lightbg}
+            onSelectColor={(hex) => setLightbg(hex)}
+          />
+          <PaletteSelector
+            selectedColor={lightbg}
+            onSelectColor={(color) => setLightbg(palette[color].hex)}
+          />
         </div>
       </Layout>
       <Layout type="full">
@@ -46,12 +64,26 @@ export default function PaletteGeneratorForm() {
           reprehenderit!
         </Text>
         <div>
-          <ColorInput />
-          <PaletteSelector />
+          <ColorInput
+            selectedColor={personality}
+            onSelectColor={(hex) => setPersonality(hex)}
+          />
+          <PaletteSelector
+            selectedColor={personality}
+            onSelectColor={(color) => setPersonality(palette[color].hex)}
+          />
         </div>
       </Layout>
       <div>
-        <Button class="block mx-auto">Generate theme</Button>
+        <Button
+          onClick={() =>
+            console.log(
+              `dark: ${darkbg}, light: ${lightbg}, perso: ${personality}`,
+            )}
+          class="block mx-auto"
+        >
+          Generate theme
+        </Button>
       </div>
     </>
   );
