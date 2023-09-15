@@ -1,8 +1,8 @@
 # Changelog
 
-## v0.0.7
+## v0.0.8
 
-- Added palette selection feature.
+- Created an API route for the palette generation.
 
 ## Roadmap
 
@@ -13,13 +13,12 @@
   - [x] Remove example boilerplate
   - [x] Install lunchbox
 - [ ] Components
-  - [ ] Color input
+  - [x] Color input
     - [x] Input type text for hex string color
     - [x] HTML5 input type color synched with the selected color.
-    - [ ] Palette selector.
-  - [ ] Palette Selector
-    - Button that opens the palette dialog.
-    - On clicking in a color inside the palette, that hex is added.
+    - [x] Palette selector.
+  - [x] Palette Selector
+    - [x] On clicking in a color inside the palette, that hex is added.
   - [ ] Resulting Snippet
     - Use the markdown component
     - Click to copy
@@ -39,7 +38,7 @@
   - [ ] 404
     - Add the standard lunchbox 404
   - [ ] Functions
-    - [ ] Import a color manip library
+    - [x] Import a color manip library
     - [ ] Panel bg color
     - [ ] Error bg and txt color
     - [ ] Personality bg and txt color

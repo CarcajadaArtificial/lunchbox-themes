@@ -11,3 +11,11 @@ export const stringIsValidHex = (str: string): boolean => {
     return false;
   }
 };
+
+export const generatePalette = (
+  bgDarkHex: string,
+  bgLightHex: string,
+  persoHex: string,
+): void => {
+  console.log(bgDarkHex, bgLightHex, persoHex);
+};

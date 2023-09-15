@@ -2,7 +2,9 @@ import { Button, Layout, Text } from "lunchbox";
 import ColorInput from "islands/ColorInput/index.tsx";
 import PaletteSelector from "islands/PaletteSelector/index.tsx";
 import { palette } from "utils/const.ts";
-import { useEffect, useState } from "preact/hooks";
+import { useState } from "preact/hooks";
+import { bring } from "utils/utils.ts";
+import type { findReq, findRes } from "api/generate.tsx";
 
 export default function PaletteGeneratorForm() {
   const [darkbg, setDarkbg] = useState("");
@@ -77,9 +79,11 @@ export default function PaletteGeneratorForm() {
       <div>
         <Button
           onClick={() =>
-            console.log(
-              `dark: ${darkbg}, light: ${lightbg}, perso: ${personality}`,
-            )}
+            bring<findReq, findRes>("/api/generate", "POST", {
+              bgDarkHex: darkbg,
+              bgLightHex: lightbg,
+              persoHex: personality,
+            }, "Error")}
           class="block mx-auto"
         >
           Generate theme
