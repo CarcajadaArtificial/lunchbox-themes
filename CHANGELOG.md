@@ -1,8 +1,14 @@
 # Changelog
 
-## v0.0.8
+## v0.0.9
 
-- Created an API route for the palette generation.
+- Added `calcEuclideanDistance`.
+- Added `sortByEuclideanDistance`.
+- Added `calcHueDifference`.
+- Added `sortByHueDifference`.
+- Added `compareFurtherLightness`.
+- Added documentation for all color functions.
+- Added `bgPanel` color.
 
 ## Roadmap
 
@@ -39,7 +45,7 @@
     - Add the standard lunchbox 404
   - [ ] Functions
     - [x] Import a color manip library
-    - [ ] Panel bg color
+    - [x] Panel bg color
     - [ ] Error bg and txt color
     - [ ] Personality bg and txt color
     - [ ] Disbaled bg color

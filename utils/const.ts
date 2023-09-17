@@ -1,3 +1,4 @@
+import { Color } from "color";
 import type { Colors, Palette } from "./types.ts";
 
 // deno-fmt-ignore
@@ -73,3 +74,19 @@ export const connectionPalette: (Colors | null)[][] = [
   ['turquesa',null,   null,     'musgo',   null,         null,     'flan',    null,'papel'     ],
   ['menta',  'hielo', null,     'alien',  'mantequilla','arena',   'tortilla',null,'blanco'    ],
 ];
+
+export const paletteColorObjects: Color[] = Object.values(palette)
+  .map((color) => Color.string(color.hex));
+
+export function findPaletteColorNameByHex(hexCode: string): Colors | null {
+  for (const name in palette) {
+    if (Object.prototype.hasOwnProperty.call(palette, name)) {
+      if (palette[name as Colors].hex === hexCode) {
+        return name as Colors;
+      }
+    } else {
+      return null;
+    }
+  }
+  return null;
+}

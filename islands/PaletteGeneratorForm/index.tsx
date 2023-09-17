@@ -7,9 +7,9 @@ import { bring } from "utils/utils.ts";
 import type { findReq, findRes } from "api/generate.tsx";
 
 export default function PaletteGeneratorForm() {
-  const [darkbg, setDarkbg] = useState("");
-  const [lightbg, setLightbg] = useState("");
-  const [personality, setPersonality] = useState("");
+  const [darkbg, setDarkbg] = useState("#3d3640");
+  const [lightbg, setLightbg] = useState("#eee6f2");
+  const [personality, setPersonality] = useState("#089969");
 
   return (
     <>
