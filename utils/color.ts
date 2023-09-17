@@ -4,7 +4,7 @@ import { findPaletteColorNameByHex, paletteColorObjects } from "utils/const.ts";
 export interface iColorScheme {
   bgPage: Color;
   bgPanel: Color;
-  // txtBase: Color;
+  txtBase: Color;
   // txtError: Color
   // txtPersonality: Color
   // bgInput: Color
@@ -73,10 +73,17 @@ const generateSingleColorSchemeTheme = (
     ).slice(0, 3),
   )[0];
 
+  const txtBaseColorObject = sortByHueDifference(
+    backgroundColorObject,
+    paletteColorObjects.filter(
+      compareIsContrasting(bgPanelColorObject, 7),
+    ),
+  )[0];
+
   return {
     bgPage: backgroundColorObject,
     bgPanel: bgPanelColorObject,
-    // txtBase: ,
+    txtBase: txtBaseColorObject,
     // txtError:
     // txtPersonality:
     // bgInput:
@@ -126,14 +133,9 @@ const sortByHueDifference = (
     .map(({ color }) => color);
 
 /**
- * Used for filtering Color object lists. If the target color is a dark color, the filter would remove
+ * Used for filtering Color object lists. If the `targetColor` is a dark color, the filter would remove
  * all colors lighter than the target. The opposite would happen if the target color is a light color,
  * the filter would remove all the colors darker than the darget.
- *
- * @param targetColor
- *  The Color object that is the base for comparing lightness.
- *
- * @returns Function meant to be used inside `array.filter()`.
  */
 const compareFurtherLightness = (
   targetColor: Color,
@@ -142,3 +144,13 @@ const compareFurtherLightness = (
   targetColor.isDark()
     ? color.lightness() < targetColor.lightness()
     : color.lightness() > targetColor.lightness();
+
+/**
+ * Used for filtering Color object lists. It calculates the contrast between the `targetColor` and every
+ * item in the array. It returns true if it is higher or equal than `minContrast`.
+ */
+const compareIsContrasting = (
+  targetColor: Color,
+  minContrast: number,
+): (color: Color) => boolean =>
+(color) => targetColor.contrast(color) >= minContrast;

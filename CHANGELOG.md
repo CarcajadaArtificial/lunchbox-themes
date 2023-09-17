@@ -1,14 +1,10 @@
 # Changelog
 
-## v0.0.9
+## v0.0.10
 
-- Added `calcEuclideanDistance`.
-- Added `sortByEuclideanDistance`.
-- Added `calcHueDifference`.
-- Added `sortByHueDifference`.
-- Added `compareFurtherLightness`.
+- Added `compareIsContrasting`.
 - Added documentation for all color functions.
-- Added `bgPanel` color.
+- Added `txtBase` color.
 
 ## Roadmap
 
@@ -46,6 +42,7 @@
   - [ ] Functions
     - [x] Import a color manip library
     - [x] Panel bg color
+    - [x] Base txt color
     - [ ] Error bg and txt color
     - [ ] Personality bg and txt color
     - [ ] Disbaled bg color
