@@ -78,15 +78,15 @@ export const connectionPalette: (Colors | null)[][] = [
 export const paletteColorObjects: Color[] = Object.values(palette)
   .map((color) => Color.string(color.hex));
 
-export function findPaletteColorNameByHex(hexCode: string): Colors | null {
+export function findPaletteColorNameByHex(hexCode: string): Colors | string {
   for (const name in palette) {
     if (Object.prototype.hasOwnProperty.call(palette, name)) {
       if (palette[name as Colors].hex === hexCode) {
         return name as Colors;
       }
     } else {
-      return null;
+      return hexCode;
     }
   }
-  return null;
+  return hexCode;
 }

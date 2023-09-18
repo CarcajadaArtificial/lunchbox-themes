@@ -5,11 +5,11 @@ export interface iColorScheme {
   bgPage: Color;
   bgPanel: Color;
   txtBase: Color;
-  // txtError: Color
+  txtError: Color;
+  bgError: Color;
   // txtPersonality: Color
   // bgInput: Color
   // bgDisabled: Color
-  // bgError: Color
 }
 
 export interface iTheme {
@@ -80,15 +80,25 @@ const generateSingleColorSchemeTheme = (
     ),
   )[0];
 
+  const txtErrorColorObject = paletteColorObjects.filter(isRed).filter(
+    compareIsContrasting(bgPanelColorObject, 7),
+  )[0];
+
+  const bgErrorColorObject = mixUntilContrasting(
+    txtErrorColorObject,
+    bgPanelColorObject,
+    txtBaseColorObject,
+  );
+
   return {
     bgPage: backgroundColorObject,
     bgPanel: bgPanelColorObject,
     txtBase: txtBaseColorObject,
-    // txtError:
+    txtError: txtErrorColorObject,
+    bgError: bgErrorColorObject,
     // txtPersonality:
     // bgInput:
     // bgDisabled:
-    // bgError:
   };
 };
 
@@ -154,3 +164,34 @@ const compareIsContrasting = (
   minContrast: number,
 ): (color: Color) => boolean =>
 (color) => targetColor.contrast(color) >= minContrast;
+
+/** Returns true if the `color` is redish enough. This function should be used in `array.filter()`. */
+const isRed = (color: Color): boolean => {
+  if (color.lightness() >= 95 || color.lightness() <= 5) {
+    return false;
+  }
+  const hue = color.hue();
+  return (hue >= 0 && hue <= 5) || (hue >= 330 && hue <= 360);
+};
+
+/** This function mixes `baseColor` with `mixColor` over and over until the result contrasts with
+ * `contrastingColor`. The `weight` and `minContrast` are optional.
+ */
+const mixUntilContrasting = (
+  baseColor: Color,
+  mixColor: Color,
+  contrastingColor: Color,
+  weight = 0.3,
+  minContrast = 7,
+): Color => {
+  const newColor = baseColor.mix(mixColor, weight);
+  return contrastingColor.contrast(newColor) >= minContrast
+    ? newColor
+    : mixUntilContrasting(
+      newColor,
+      mixColor,
+      contrastingColor,
+      weight,
+      minContrast,
+    );
+};

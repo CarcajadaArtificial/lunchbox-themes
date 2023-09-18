@@ -1,10 +1,11 @@
 # Changelog
 
-## v0.0.10
+## v0.0.11
 
-- Added `compareIsContrasting`.
-- Added documentation for all color functions.
-- Added `txtBase` color.
+- Added `mixUntilContrasting`.
+- Added `isRed`.
+- Added `txtError` color.
+- Added `bgError` color.
 
 ## Roadmap
 
