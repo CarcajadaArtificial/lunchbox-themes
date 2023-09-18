@@ -7,9 +7,10 @@ export interface iColorScheme {
   txtBase: Color;
   txtError: Color;
   bgError: Color;
-  // txtPersonality: Color
-  // bgInput: Color
-  // bgDisabled: Color
+  txtPersonality: Color;
+  bgPanel50: Color;
+  bgPanel35: Color;
+  bgPanel15: Color;
 }
 
 export interface iTheme {
@@ -90,15 +91,22 @@ const generateSingleColorSchemeTheme = (
     txtBaseColorObject,
   );
 
+  const txtPersonality = mixUntilContrasting(
+    persoColorObject,
+    txtBaseColorObject,
+    bgPanelColorObject,
+  );
+
   return {
     bgPage: backgroundColorObject,
     bgPanel: bgPanelColorObject,
     txtBase: txtBaseColorObject,
     txtError: txtErrorColorObject,
     bgError: bgErrorColorObject,
-    // txtPersonality:
-    // bgInput:
-    // bgDisabled:
+    txtPersonality: txtPersonality,
+    bgPanel50: bgPanelColorObject.setAlpha(0.50),
+    bgPanel35: bgPanelColorObject.setAlpha(0.35),
+    bgPanel15: bgPanelColorObject.setAlpha(0.15),
   };
 };
 

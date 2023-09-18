@@ -1,11 +1,12 @@
 # Changelog
 
-## v0.0.11
+## v0.0.12
 
-- Added `mixUntilContrasting`.
-- Added `isRed`.
-- Added `txtError` color.
-- Added `bgError` color.
+- Added the `resultCSS` component.
+- Added `txtPersonality` color.
+- Added `bgPanel50` color.
+- Added `bgPanel35` color.
+- Added `bgPanel15` color.
 
 ## Roadmap
 
@@ -22,19 +23,18 @@
     - [x] Palette selector.
   - [x] Palette Selector
     - [x] On clicking in a color inside the palette, that hex is added.
-  - [ ] Resulting Snippet
-    - Use the markdown component
-    - Click to copy
+  - [x] Resulting Snippet
+    - [x] Use the markdown component
+    - [x] Click to copy
 - [ ] Pages
   - [ ] Home
     - Header with instructions
     - Footer with extra links and references
-    - One color selector for dark mode background color
-    - One color selector for light mode background color
-    - One color selector for personality color
-    - Possibility to add n more personality colors
-    - Button that generates the resulting snippet
-    - Resulting snippet
+    - [x] One color selector for dark mode background color
+    - [x] One color selector for light mode background color
+    - [x] One color selector for personality color
+    - [x] Button that generates the resulting snippet
+    - [x] Resulting snippet
   - [ ] About
     - Markdown explaning the reasoning behind the tool
     - Links to important references
@@ -44,6 +44,6 @@
     - [x] Import a color manip library
     - [x] Panel bg color
     - [x] Base txt color
-    - [ ] Error bg and txt color
-    - [ ] Personality bg and txt color
-    - [ ] Disbaled bg color
+    - [x] Error bg and txt color
+    - [x] Personality bg and txt color
+    - [x] Disbaled bg color
