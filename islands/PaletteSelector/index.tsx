@@ -21,7 +21,6 @@ export default function PaletteSelector(props: iPaletteSelector) {
 
   return (
     <div>
-      <Text noMargins type="subheading">Lunchbox palette:</Text>
       <Input
         checked={ordered}
         oninput={(ev) => setOrdered((ev.target as HTMLInputElement).checked)}

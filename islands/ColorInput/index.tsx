@@ -19,7 +19,7 @@ export default function ColorInput(props: iColorInput) {
   return (
     <div class="flex gap-3">
       <Input
-        label="Hex color code"
+        label="Hex"
         placeholder="#000"
         type="text"
         fwd={{ container: { class: "flex-1" } }}

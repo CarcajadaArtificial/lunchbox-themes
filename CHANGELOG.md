@@ -1,12 +1,10 @@
 # Changelog
 
-## v0.0.12
+## v0.0.13
 
-- Added the `resultCSS` component.
-- Added `txtPersonality` color.
-- Added `bgPanel50` color.
-- Added `bgPanel35` color.
-- Added `bgPanel15` color.
+- Added `home.md` markdown data.
+- Refactored the `PaletteGeneratorForm` island.
+- Added Obsidian gitignore.
 
 ## Roadmap
 
@@ -27,9 +25,9 @@
     - [x] Use the markdown component
     - [x] Click to copy
 - [ ] Pages
-  - [ ] Home
-    - Header with instructions
-    - Footer with extra links and references
+  - [x] Home
+    - [x] Header with instructions
+    - [x] Footer with extra links and references
     - [x] One color selector for dark mode background color
     - [x] One color selector for light mode background color
     - [x] One color selector for personality color
@@ -40,7 +38,7 @@
     - Links to important references
   - [ ] 404
     - Add the standard lunchbox 404
-  - [ ] Functions
+  - [x] Functions
     - [x] Import a color manip library
     - [x] Panel bg color
     - [x] Base txt color

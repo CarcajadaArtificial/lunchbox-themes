@@ -15,17 +15,9 @@ export default function PaletteGeneratorForm() {
 
   return (
     <>
-      <Layout type="full">
-        <Text type="heading">Dark-mode background</Text>
-      </Layout>
-      <Layout type="halves" class="mb-24">
-        <Text class="pr-6">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe rem
-          distinctio similique nulla aperiam maxime illo ex enim natus. Esse,
-          nesciunt error! Deleniti ad illum dolorum commodi dolor nemo
-          reprehenderit!
-        </Text>
-        <div>
+      <Layout type="thirds">
+        <div class="pr-3">
+          <Text type="subheading">Dark BG</Text>
           <ColorInput
             selectedColor={darkbg}
             onSelectColor={(hex) => setDarkbg(hex)}
@@ -35,18 +27,8 @@ export default function PaletteGeneratorForm() {
             onSelectColor={(color) => setDarkbg(palette[color].hex)}
           />
         </div>
-      </Layout>
-      <Layout type="full">
-        <Text type="heading">Light-mode background</Text>
-      </Layout>
-      <Layout type="halves" class="mb-24">
-        <Text class="pr-6">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe rem
-          distinctio similique nulla aperiam maxime illo ex enim natus. Esse,
-          nesciunt error! Deleniti ad illum dolorum commodi dolor nemo
-          reprehenderit!
-        </Text>
-        <div>
+        <div class="pr-3">
+          <Text type="subheading">Light BG</Text>
           <ColorInput
             selectedColor={lightbg}
             onSelectColor={(hex) => setLightbg(hex)}
@@ -56,18 +38,8 @@ export default function PaletteGeneratorForm() {
             onSelectColor={(color) => setLightbg(palette[color].hex)}
           />
         </div>
-      </Layout>
-      <Layout type="full">
-        <Text type="heading">Personality</Text>
-      </Layout>
-      <Layout type="halves" class="mb-24">
-        <Text class="pr-6">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe rem
-          distinctio similique nulla aperiam maxime illo ex enim natus. Esse,
-          nesciunt error! Deleniti ad illum dolorum commodi dolor nemo
-          reprehenderit!
-        </Text>
-        <div>
+        <div class="pr-3">
+          <Text type="subheading">Personality</Text>
           <ColorInput
             selectedColor={personality}
             onSelectColor={(hex) => setPersonality(hex)}
@@ -78,7 +50,7 @@ export default function PaletteGeneratorForm() {
           />
         </div>
       </Layout>
-      <div>
+      <div class="mt-12">
         <Button
           onClick={async () => {
             const res = await bring<findReq, findRes>("/api/generate", "POST", {
