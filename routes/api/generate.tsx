@@ -31,9 +31,13 @@ export const handler: Handlers<Data> = {
   --clr-txt-error: ${dark.txtError.hex()};
   --clr-bg-error: ${dark.bgError.hex()};
   --clr-txt-personality: ${dark.txtPersonality.hex()};
+  --clr-bg-personality: ${dark.bgPersonality.hex()};
   --clr-bg-panel-50: ${dark.bgPanel50.hexa()};
   --clr-bg-panel-35: ${dark.bgPanel35.hexa()};
   --clr-bg-panel-15: ${dark.bgPanel15.hexa()};
+  --clr-bg-personality-50: ${dark.bgPersonality50.hexa()};
+  --clr-bg-personality-35: ${dark.bgPersonality35.hexa()};
+  --clr-bg-personality-15: ${dark.bgPersonality15.hexa()};
 }
 @media (prefers-color-scheme: light) {
   :root{
@@ -43,9 +47,13 @@ export const handler: Handlers<Data> = {
     --clr-txt-error: ${light.txtError.hex()};
     --clr-bg-error: ${light.bgError.hex()};
     --clr-txt-personality: ${light.txtPersonality.hex()};
+    --clr-bg-personality: ${light.bgPersonality.hex()};
     --clr-bg-panel-50: ${light.bgPanel50.hexa()};
     --clr-bg-panel-35: ${light.bgPanel35.hexa()};
     --clr-bg-panel-15: ${light.bgPanel15.hexa()};
+    --clr-bg-personality-50: ${dark.bgPersonality50.hexa()};
+    --clr-bg-personality-35: ${dark.bgPersonality35.hexa()};
+    --clr-bg-personality-15: ${dark.bgPersonality15.hexa()};
   } 
 }
 .clr-bg-page { 
@@ -66,6 +74,9 @@ export const handler: Handlers<Data> = {
 .clr-txt-personality { 
   color: var(--clr-txt-personality);
 }
+.clr-bg-personality { 
+  background-color: var(--clr-bg-personality);
+}
 .clr-bg-panel-50 { 
   background-color: var(--clr-bg-panel-50);
 }
@@ -74,6 +85,15 @@ export const handler: Handlers<Data> = {
 }
 .clr-bg-panel-15 { 
   background-color: var(--clr-bg-panel-15);
+}
+.clr-bg-personality-50 { 
+  background-color: var(--clr-bg-personality-50);
+}
+.clr-bg-personality-35 { 
+  background-color: var(--clr-bg-personality-35);
+}
+.clr-bg-personality-15 { 
+  background-color: var(--clr-bg-personality-15);
 }
 `;
 

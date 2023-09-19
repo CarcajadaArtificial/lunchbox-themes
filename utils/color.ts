@@ -8,9 +8,13 @@ export interface iColorScheme {
   txtError: Color;
   bgError: Color;
   txtPersonality: Color;
+  bgPersonality: Color;
   bgPanel50: Color;
   bgPanel35: Color;
   bgPanel15: Color;
+  bgPersonality50: Color;
+  bgPersonality35: Color;
+  bgPersonality15: Color;
 }
 
 export interface iTheme {
@@ -91,10 +95,18 @@ const generateSingleColorSchemeTheme = (
     txtBaseColorObject,
   );
 
-  const txtPersonality = mixUntilContrasting(
+  const txtPersonalityColorObject = mixUntilContrasting(
     persoColorObject,
     txtBaseColorObject,
     bgPanelColorObject,
+  );
+
+  const bgPersonalityColorObject = mixUntilContrasting(
+    persoColorObject,
+    backgroundColorObject,
+    txtBaseColorObject,
+    0.3,
+    8,
   );
 
   return {
@@ -103,10 +115,14 @@ const generateSingleColorSchemeTheme = (
     txtBase: txtBaseColorObject,
     txtError: txtErrorColorObject,
     bgError: bgErrorColorObject,
-    txtPersonality: txtPersonality,
+    txtPersonality: txtPersonalityColorObject,
+    bgPersonality: bgPersonalityColorObject,
     bgPanel50: bgPanelColorObject.setAlpha(0.50),
     bgPanel35: bgPanelColorObject.setAlpha(0.35),
     bgPanel15: bgPanelColorObject.setAlpha(0.15),
+    bgPersonality50: persoColorObject.setAlpha(0.50),
+    bgPersonality35: persoColorObject.setAlpha(0.35),
+    bgPersonality15: persoColorObject.setAlpha(0.15),
   };
 };
 

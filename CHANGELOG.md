@@ -1,10 +1,11 @@
 # Changelog
 
-## v0.0.13
+## v0.0.14
 
-- Added `home.md` markdown data.
-- Refactored the `PaletteGeneratorForm` island.
-- Added Obsidian gitignore.
+- Added the `bgPersonality` color.
+- Added the `bgPersonality50` color.
+- Added the `bgPersonality35` color.
+- Added the `bgPersonality15` color.
 
 ## Roadmap
 
@@ -14,7 +15,7 @@
   - [x] Add Fresh
   - [x] Remove example boilerplate
   - [x] Install lunchbox
-- [ ] Components
+- [x] Components
   - [x] Color input
     - [x] Input type text for hex string color
     - [x] HTML5 input type color synched with the selected color.
