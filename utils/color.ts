@@ -9,12 +9,13 @@ export interface iColorScheme {
   bgError: Color;
   txtPersonality: Color;
   bgPersonality: Color;
+  bgError30: Color;
   bgPanel50: Color;
   bgPanel35: Color;
   bgPanel15: Color;
-  bgPersonality50: Color;
-  bgPersonality35: Color;
-  bgPersonality15: Color;
+  bgPersonality60: Color;
+  bgPersonality45: Color;
+  bgPersonality30: Color;
 }
 
 export interface iTheme {
@@ -117,12 +118,13 @@ const generateSingleColorSchemeTheme = (
     bgError: bgErrorColorObject,
     txtPersonality: txtPersonalityColorObject,
     bgPersonality: bgPersonalityColorObject,
+    bgError30: txtErrorColorObject.setAlpha(0.30),
     bgPanel50: bgPanelColorObject.setAlpha(0.50),
     bgPanel35: bgPanelColorObject.setAlpha(0.35),
     bgPanel15: bgPanelColorObject.setAlpha(0.15),
-    bgPersonality50: persoColorObject.setAlpha(0.50),
-    bgPersonality35: persoColorObject.setAlpha(0.35),
-    bgPersonality15: persoColorObject.setAlpha(0.15),
+    bgPersonality60: persoColorObject.setAlpha(0.60),
+    bgPersonality30: persoColorObject.setAlpha(0.45),
+    bgPersonality45: persoColorObject.setAlpha(0.30),
   };
 };
 

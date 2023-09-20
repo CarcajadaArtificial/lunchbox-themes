@@ -32,12 +32,13 @@ export const handler: Handlers<Data> = {
   --clr-bg-error: ${dark.bgError.hex()};
   --clr-txt-personality: ${dark.txtPersonality.hex()};
   --clr-bg-personality: ${dark.bgPersonality.hex()};
+  --clr-bg-error-30: ${dark.bgError30.hexa()};
   --clr-bg-panel-50: ${dark.bgPanel50.hexa()};
   --clr-bg-panel-35: ${dark.bgPanel35.hexa()};
   --clr-bg-panel-15: ${dark.bgPanel15.hexa()};
-  --clr-bg-personality-50: ${dark.bgPersonality50.hexa()};
-  --clr-bg-personality-35: ${dark.bgPersonality35.hexa()};
-  --clr-bg-personality-15: ${dark.bgPersonality15.hexa()};
+  --clr-bg-personality-60: ${dark.bgPersonality60.hexa()};
+  --clr-bg-personality-45: ${dark.bgPersonality45.hexa()};
+  --clr-bg-personality-30: ${dark.bgPersonality30.hexa()};
 }
 @media (prefers-color-scheme: light) {
   :root{
@@ -48,12 +49,13 @@ export const handler: Handlers<Data> = {
     --clr-bg-error: ${light.bgError.hex()};
     --clr-txt-personality: ${light.txtPersonality.hex()};
     --clr-bg-personality: ${light.bgPersonality.hex()};
+    --clr-bg-error-30: ${light.bgError30.hexa()};
     --clr-bg-panel-50: ${light.bgPanel50.hexa()};
     --clr-bg-panel-35: ${light.bgPanel35.hexa()};
     --clr-bg-panel-15: ${light.bgPanel15.hexa()};
-    --clr-bg-personality-50: ${dark.bgPersonality50.hexa()};
-    --clr-bg-personality-35: ${dark.bgPersonality35.hexa()};
-    --clr-bg-personality-15: ${dark.bgPersonality15.hexa()};
+    --clr-bg-personality-60: ${light.bgPersonality60.hexa()};
+    --clr-bg-personality-45: ${light.bgPersonality45.hexa()};
+    --clr-bg-personality-30: ${light.bgPersonality30.hexa()};
   } 
 }
 .clr-bg-page { 
@@ -77,6 +79,9 @@ export const handler: Handlers<Data> = {
 .clr-bg-personality { 
   background-color: var(--clr-bg-personality);
 }
+.clr-bg-error-30 { 
+  background-color: var(--clr-bg-error-30);
+}
 .clr-bg-panel-50 { 
   background-color: var(--clr-bg-panel-50);
 }
@@ -86,14 +91,14 @@ export const handler: Handlers<Data> = {
 .clr-bg-panel-15 { 
   background-color: var(--clr-bg-panel-15);
 }
-.clr-bg-personality-50 { 
-  background-color: var(--clr-bg-personality-50);
+.clr-bg-personality-60 { 
+  background-color: var(--clr-bg-personality-60);
 }
-.clr-bg-personality-35 { 
-  background-color: var(--clr-bg-personality-35);
+.clr-bg-personality-45 { 
+  background-color: var(--clr-bg-personality-45);
 }
-.clr-bg-personality-15 { 
-  background-color: var(--clr-bg-personality-15);
+.clr-bg-personality-30 { 
+  background-color: var(--clr-bg-personality-30);
 }
 `;
 
