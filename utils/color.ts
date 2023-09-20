@@ -123,8 +123,8 @@ const generateSingleColorSchemeTheme = (
     bgPanel35: bgPanelColorObject.setAlpha(0.35),
     bgPanel15: bgPanelColorObject.setAlpha(0.15),
     bgPersonality60: persoColorObject.setAlpha(0.60),
-    bgPersonality30: persoColorObject.setAlpha(0.45),
-    bgPersonality45: persoColorObject.setAlpha(0.30),
+    bgPersonality45: persoColorObject.setAlpha(0.45),
+    bgPersonality30: persoColorObject.setAlpha(0.30),
   };
 };
 

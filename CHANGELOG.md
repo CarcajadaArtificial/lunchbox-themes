@@ -1,10 +1,8 @@
 # Changelog
 
-## v0.0.15
+## v0.0.16
 
-- Added the `bgPersonality60` color.
-- Added the `bgPersonality45` color.
-- Added the `bgPersonality30` color.
+- Minor fix
 
 ## Roadmap
 
