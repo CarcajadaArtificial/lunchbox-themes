@@ -32,7 +32,7 @@ export const handler: Handlers<Data> = {
   --clr-bg-error: ${dark.bgError.hex()};
   --clr-txt-personality: ${dark.txtPersonality.hex()};
   --clr-bg-personality: ${dark.bgPersonality.hex()};
-  --clr-bg-error-30: ${dark.bgError30.hexa()};
+  --clr-bg-error-50: ${dark.bgError50.hexa()};
   --clr-bg-panel-50: ${dark.bgPanel50.hexa()};
   --clr-bg-panel-35: ${dark.bgPanel35.hexa()};
   --clr-bg-panel-15: ${dark.bgPanel15.hexa()};
@@ -49,7 +49,7 @@ export const handler: Handlers<Data> = {
     --clr-bg-error: ${light.bgError.hex()};
     --clr-txt-personality: ${light.txtPersonality.hex()};
     --clr-bg-personality: ${light.bgPersonality.hex()};
-    --clr-bg-error-30: ${light.bgError30.hexa()};
+    --clr-bg-error-50: ${light.bgError50.hexa()};
     --clr-bg-panel-50: ${light.bgPanel50.hexa()};
     --clr-bg-panel-35: ${light.bgPanel35.hexa()};
     --clr-bg-panel-15: ${light.bgPanel15.hexa()};
@@ -79,8 +79,8 @@ export const handler: Handlers<Data> = {
 .clr-bg-personality { 
   background-color: var(--clr-bg-personality);
 }
-.clr-bg-error-30 { 
-  background-color: var(--clr-bg-error-30);
+.clr-bg-error-50 { 
+  background-color: var(--clr-bg-error-50);
 }
 .clr-bg-panel-50 { 
   background-color: var(--clr-bg-panel-50);

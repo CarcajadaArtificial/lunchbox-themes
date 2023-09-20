@@ -1,5 +1,5 @@
 import { Color } from "color";
-import { findPaletteColorNameByHex, paletteColorObjects } from "utils/const.ts";
+import { paletteColorObjects } from "utils/const.ts";
 
 export interface iColorScheme {
   bgPage: Color;
@@ -9,7 +9,7 @@ export interface iColorScheme {
   bgError: Color;
   txtPersonality: Color;
   bgPersonality: Color;
-  bgError30: Color;
+  bgError50: Color;
   bgPanel50: Color;
   bgPanel35: Color;
   bgPanel15: Color;
@@ -118,7 +118,7 @@ const generateSingleColorSchemeTheme = (
     bgError: bgErrorColorObject,
     txtPersonality: txtPersonalityColorObject,
     bgPersonality: bgPersonalityColorObject,
-    bgError30: txtErrorColorObject.setAlpha(0.30),
+    bgError50: txtErrorColorObject.setAlpha(0.50),
     bgPanel50: bgPanelColorObject.setAlpha(0.50),
     bgPanel35: bgPanelColorObject.setAlpha(0.35),
     bgPanel15: bgPanelColorObject.setAlpha(0.15),

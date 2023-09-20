@@ -1,8 +1,8 @@
 # Changelog
 
-## v0.0.16
+## v0.0.17
 
-- Minor fix
+- Changed the color `clr-bg-error-30` to `clr-bg-error-50`;
 
 ## Roadmap
 
